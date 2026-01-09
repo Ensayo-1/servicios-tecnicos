@@ -149,7 +149,7 @@ body {
 .reviews-track {
   display: flex;
   gap: 25px;
-  animation: reviewsMove 40s linear infinite;
+  animation: reviewsMove 25s linear infinite;
 }
 
 .review {
