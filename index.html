@@ -2,8 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Servicios Técnicos Profesionales</title>
+
+  <!-- SEO BÁSICO -->
+  <title>TecniHogar Express | Reparación de Electrodomésticos en Bogotá</title>
+  <meta name="description" content="Servicio técnico profesional en Bogotá. Reparación de neveras, lavadoras, aires acondicionados y más. Atención rápida y garantizada.">
+  <meta name="keywords" content="reparación de neveras Bogotá, técnico lavadoras, servicio técnico a domicilio, aires acondicionados Bogotá">
+  <meta name="author" content="TecniHogar Express">
+
+  <!-- SEO LOCAL -->
+  <meta name="geo.region" content="CO-DC">
+  <meta name="geo.placename" content="Bogotá">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -12,29 +22,30 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <h1>Servicios Técnicos Profesionales</h1>
-    <p>Reparación y mantenimiento confiable para tu hogar</p>
-    <a href="#contacto" class="btn-primary">Solicitar servicio</a>
+    <h1>TecniHogar Express</h1>
+    <p>Servicio técnico a domicilio en <strong>Bogotá</strong><br>
+       Rápido • Garantizado • Profesional</p>
+    <a href="#contacto" class="btn-primary">Solicitar servicio ahora</a>
   </div>
 </header>
 
 <!-- ESTADÍSTICAS -->
 <section class="stats">
   <div class="stat">+10<span>Años de experiencia</span></div>
-  <div class="stat">+500<span>Clientes satisfechos</span></div>
-  <div class="stat">24/7<span>Atención</span></div>
+  <div class="stat">+500<span>Clientes en Bogotá</span></div>
+  <div class="stat">Mismo día<span>Atención rápida</span></div>
   <div class="stat">100%<span>Garantía</span></div>
 </section>
 
 <!-- SERVICIOS -->
 <section class="section">
-  <h2>Nuestros Servicios</h2>
+  <h2>Servicios Técnicos en Bogotá</h2>
   <div class="services">
-    <div class="service-card">❄️ Reparación de Refrigeradores</div>
-    <div class="service-card">🧺 Mantenimiento de Lavadoras</div>
+    <div class="service-card">❄️ Reparación de Neveras</div>
+    <div class="service-card">🧺 Lavadoras y Secadoras</div>
     <div class="service-card">🌬️ Aires Acondicionados</div>
     <div class="service-card">🏊 Mantenimiento de Piscinas</div>
-    <div class="service-card">⚡ Electricidad Básica</div>
+    <div class="service-card">⚡ Electricidad Residencial</div>
     <div class="service-card">🔧 Mantenimiento Preventivo</div>
   </div>
 </section>
@@ -58,41 +69,61 @@
 
 <!-- RESEÑAS -->
 <section class="section">
-  <h2>Opiniones de Nuestros Clientes</h2>
-
+  <h2>Clientes Satisfechos en Bogotá</h2>
   <div class="reviews-slider">
     <div class="reviews-track">
-      <div class="review">★★★★★<p>Excelente servicio y muy rápido.</p><span>María G.</span></div>
-      <div class="review">★★★★★<p>Muy profesional y responsable.</p><span>Carlos R.</span></div>
-      <div class="review">★★★★★<p>Repararon mi nevera el mismo día.</p><span>Ana P.</span></div>
-      <div class="review">★★★★★<p>Trabajo limpio y garantizado.</p><span>Juan L.</span></div>
-      <div class="review">★★★★★<p>Precio justo y buena atención.</p><span>Diana S.</span></div>
-      <div class="review">★★★★★<p>Los recomiendo totalmente.</p><span>Andrés T.</span></div>
-      <div class="review">★★★★★<p>Muy cumplidos y serios.</p><span>Sofía M.</span></div>
-      <div class="review">★★★★★<p>Servicio de calidad.</p><span>Miguel A.</span></div>
-      <div class="review">★★★★★<p>Volvería a llamarlos.</p><span>Paula C.</span></div>
-      <div class="review">★★★★★<p>Excelente atención.</p><span>Jorge F.</span></div>
+      <div class="review">★★★★★<p>Servicio rápido y confiable.</p><span>María G.</span></div>
+      <div class="review">★★★★★<p>Repararon mi nevera el mismo día.</p><span>Carlos R.</span></div>
+      <div class="review">★★★★★<p>Muy profesionales.</p><span>Ana P.</span></div>
+      <div class="review">★★★★★<p>Precio justo.</p><span>Juan L.</span></div>
+      <div class="review">★★★★★<p>Los recomiendo.</p><span>Diana S.</span></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- FORMULARIO A WHATSAPP -->
 <section class="section contact" id="contacto">
-  <h2>Contáctanos</h2>
-  <p>📞 WhatsApp: <strong>310 761 4795</strong></p>
-  <br>
-  <a href="https://wa.me/573107614795" target="_blank" class="btn-primary">
-    Escribir por WhatsApp
-  </a>
+  <h2>Solicita tu Servicio</h2>
+
+  <form onsubmit="enviarWhatsApp(event)">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="text" id="servicio" placeholder="¿Qué servicio necesitas?" required>
+    <textarea id="mensaje" placeholder="Describe el problema"></textarea>
+    <button type="submit" class="btn-primary">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+<!-- MAPA -->
+<section class="section">
+  <h2>Atendemos en Bogotá</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Bogotá%20Colombia&output=embed"
+    width="100%" height="300" style="border-radius:20px;border:0;" loading="lazy">
+  </iframe>
 </section>
 
 <!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/573107614795" target="_blank" class="whatsapp">💬</a>
+<a href="https://wa.me/573107614795" class="whatsapp" target="_blank">💬</a>
 
 <footer>
-  <p>© 2026 Servicios Técnicos Profesionales</p>
+  <p>© 2026 TecniHogar Express | Servicio Técnico en Bogotá</p>
 </footer>
 
 <script src="js/script.js"></script>
+
+<!-- FORM WHATSAPP -->
+<script>
+function enviarWhatsApp(e) {
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value;
+  const servicio = document.getElementById('servicio').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  const texto = `Hola, soy ${nombre}. Necesito el servicio de ${servicio}. ${mensaje}`;
+  const url = `https://wa.me/573107614795?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+}
+</script>
+
 </body>
 </html>
