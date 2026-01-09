@@ -1,10 +1,10 @@
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+const slides = document.querySelectorAll('.slide');
+let i = 0;
 
-slides[index].style.opacity = 1;
+slides[i].style.opacity = 1;
 
 setInterval(() => {
-  slides[index].style.opacity = 0;
-  index = (index + 1) % slides.length;
-  slides[index].style.opacity = 1;
-}, 3000);
+  slides[i].style.opacity = 0;
+  i = (i + 1) % slides.length;
+  slides[i].style.opacity = 1;
+}, 3500);
