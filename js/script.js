@@ -7,4 +7,4 @@ setInterval(() => {
   slides[i].style.opacity = 0;
   i = (i + 1) % slides.length;
   slides[i].style.opacity = 1;
-}, 3500);
+}, 3000);
