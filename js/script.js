@@ -1,8 +1,14 @@
-let index = 0;
-const images = document.querySelectorAll(".gallery img");
+let current = 0;
+const images = document.querySelectorAll(".gallery-img");
+
+// mostrar solo la primera
+images[current].style.opacity = 1;
+
+// solo rota las primeras 3 aunque haya más
+const maxImages = Math.min(images.length, 3);
 
 setInterval(() => {
-  images.forEach(img => img.style.display = "none");
-  images[index].style.display = "block";
-  index = (index + 1) % images.length;
-}, 3000);
+  images[current].style.opacity = 0;
+  current = (current + 1) % maxImages;
+  images[current].style.opacity = 1;
+}, 3500); // más corto y elegante
