@@ -25,6 +25,7 @@
     <h1>TecniHogar Express</h1>
     <p>Servicio técnico a domicilio en <strong>Bogotá</strong><br>
        Rápido • Garantizado • Profesional</p>
+    <br>
     <a href="#contacto" class="btn-primary">Solicitar servicio ahora</a>
   </div>
 </header>
@@ -83,22 +84,40 @@
 
 <!-- FORMULARIO A WHATSAPP -->
 <section class="section contact" id="contacto">
-  <h2>Solicita tu Servicio</h2>
+  <h2>Agenda tu Servicio Técnico</h2>
+  <p>
+    Atención rápida a domicilio en <strong>Bogotá</strong>.<br>
+    Escríbenos y recibe respuesta inmediata por WhatsApp.
+  </p>
 
   <form onsubmit="enviarWhatsApp(event)">
-    <input type="text" id="nombre" placeholder="Tu nombre" required>
-    <input type="text" id="servicio" placeholder="¿Qué servicio necesitas?" required>
-    <textarea id="mensaje" placeholder="Describe el problema"></textarea>
-    <button type="submit" class="btn-primary">Enviar por WhatsApp</button>
+    <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+    <input type="text" id="servicio" placeholder="Ej: Reparación de lavadora" required>
+    <textarea id="mensaje" placeholder="Cuéntanos qué problema presenta el equipo"></textarea>
+    <button type="submit" class="btn-primary">
+      Enviar solicitud por WhatsApp
+    </button>
   </form>
+
+  <p style="margin-top:15px; font-size:0.9rem; color:#94a3b8;">
+    ⏱️ Respuesta rápida • 💼 Técnicos certificados • ✅ Servicio garantizado
+  </p>
 </section>
 
 <!-- MAPA -->
 <section class="section">
-  <h2>Atendemos en Bogotá</h2>
+  <h2>Zona de Atención</h2>
+  <p style="text-align:center; margin-bottom:20px; color:#cbd5f5;">
+    Servicio técnico a domicilio en Bogotá y municipios cercanos.
+  </p>
+
   <iframe 
     src="https://www.google.com/maps?q=Bogotá%20Colombia&output=embed"
-    width="100%" height="300" style="border-radius:20px;border:0;" loading="lazy">
+    width="100%" 
+    height="320"
+    style="border:0; border-radius:25px;"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </section>
 
