@@ -5,149 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios Técnicos a Domicilio</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
-
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #0b5ed7, #0a58ca);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-
-    /* NAV */
-    nav {
-      background: #083c8c;
-      padding: 10px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #0b5ed7;
-      margin-bottom: 20px;
-    }
-
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    /* WHY US */
-    .why {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .why div {
-      background: #e9f1ff;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #e9f1ff;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .contact p {
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 22px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -155,22 +14,15 @@
 <nav>
   <a href="#inicio">Inicio</a>
   <a href="#servicios">Servicios</a>
-  <a href="#porque">Por qué elegirnos</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="#resenas">Reseñas</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
 <header id="inicio">
   <h1>Servicios Técnicos a Domicilio</h1>
-  <p>Reparación y mantenimiento profesional</p>
+  <p>Reparación profesional y garantizada</p>
 </header>
-
-<section>
-  <h2>¿Quiénes somos?</h2>
-  <p style="text-align:center;">
-    Técnicos con experiencia en refrigeradores, lavadoras, aires acondicionados,
-    piscinas y más. Servicio rápido, confiable y a precios justos.
-  </p>
-</section>
 
 <section id="servicios">
   <h2>Servicios</h2>
@@ -184,23 +36,28 @@
   </div>
 </section>
 
-<section id="porque">
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="why">
-    <div>✔ Atención rápida</div>
-    <div>✔ Precios justos</div>
-    <div>✔ Servicio a domicilio</div>
-    <div>✔ Experiencia comprobada</div>
+<section id="trabajos">
+  <h2>Trabajos realizados</h2>
+  <div class="gallery">
+    <img src="img/trabajo1.jpg" alt="Trabajo realizado">
+    <img src="img/trabajo2.jpg" alt="Trabajo realizado">
+    <img src="img/trabajo3.jpg" alt="Trabajo realizado">
+  </div>
+</section>
+
+<section id="resenas">
+  <h2>Clientes satisfechos</h2>
+  <div class="reviews">
+    <div class="review">“Excelente servicio.” <span>— María G.</span></div>
+    <div class="review">“Muy puntual y profesional.” <span>— Carlos R.</span></div>
+    <div class="review">“Buen precio y garantía.” <span>— Ana P.</span></div>
   </div>
 </section>
 
 <section id="contacto" class="contact">
   <h2>Contacto</h2>
-  <p><strong>📞 Teléfono / WhatsApp:</strong> 310 761 4795</p>
-  <p><strong>📍 Zona:</strong> Ciudad y alrededores</p>
-  <a class="btn" href="https://wa.me/573107614795" target="_blank">
-    Escríbenos por WhatsApp
-  </a>
+  <p><strong>WhatsApp:</strong> 310 761 4795</p>
+  <a class="btn" href="https://wa.me/573107614795" target="_blank">Escríbenos</a>
 </section>
 
 <a class="whatsapp-float" href="https://wa.me/573107614795" target="_blank">💬</a>
@@ -209,6 +66,8 @@
   <p>© 2026 Servicios Técnicos Integrales</p>
 </footer>
 
+<!-- JS -->
+<script src="js/script.js"></script>
 </body>
 </html>
 
