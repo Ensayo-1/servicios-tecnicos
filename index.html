@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- SEO BÁSICO -->
-  <title>TecniHogar Express | Reparación de Electrodomésticos en Bogotá</title>
-  <meta name="description" content="Servicio técnico profesional en Bogotá. Reparación de neveras, lavadoras, aires acondicionados y más. Atención rápida y garantizada.">
-  <meta name="keywords" content="reparación de neveras Bogotá, técnico lavadoras, servicio técnico a domicilio, aires acondicionados Bogotá">
+  <!-- SEO -->
+  <title>TecniHogar Express | Servicio Técnico en Bogotá</title>
+  <meta name="description" content="Reparación de neveras, lavadoras y aires acondicionados en Bogotá. Servicio técnico a domicilio rápido, garantizado y profesional.">
+  <meta name="keywords" content="servicio técnico Bogotá, reparación de neveras, lavadoras, técnicos a domicilio">
   <meta name="author" content="TecniHogar Express">
 
   <!-- SEO LOCAL -->
   <meta name="geo.region" content="CO-DC">
   <meta name="geo.placename" content="Bogotá">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/estilos.css">
@@ -23,17 +24,18 @@
 <header class="hero">
   <div class="hero-content">
     <h1>TecniHogar Express</h1>
-    <p>Servicio técnico a domicilio en <strong>Bogotá</strong><br>
-       Rápido • Garantizado • Profesional</p>
-    <br>
+    <p>
+      Servicio técnico a domicilio en <strong>Bogotá</strong><br>
+      Rápido • Profesional • Garantizado
+    </p>
     <a href="#contacto" class="btn-primary">Solicitar servicio ahora</a>
   </div>
 </header>
 
-<!-- ESTADÍSTICAS -->
+<!-- STATS -->
 <section class="stats">
   <div class="stat">+10<span>Años de experiencia</span></div>
-  <div class="stat">+500<span>Clientes en Bogotá</span></div>
+  <div class="stat">+500<span>Clientes satisfechos</span></div>
   <div class="stat">Mismo día<span>Atención rápida</span></div>
   <div class="stat">100%<span>Garantía</span></div>
 </section>
@@ -60,17 +62,12 @@
     <img src="img/trabajo3.jpg" class="slide">
     <img src="img/trabajo4.jpg" class="slide">
     <img src="img/trabajo5.jpg" class="slide">
-    <img src="img/trabajo6.jpg" class="slide">
-    <img src="img/trabajo7.jpg" class="slide">
-    <img src="img/trabajo8.jpg" class="slide">
-    <img src="img/trabajo9.jpg" class="slide">
-    <img src="img/trabajo10.jpg" class="slide">
   </div>
 </section>
 
 <!-- RESEÑAS -->
 <section class="section">
-  <h2>Clientes Satisfechos en Bogotá</h2>
+  <h2>Clientes Satisfechos</h2>
   <div class="reviews-slider">
     <div class="reviews-track">
       <div class="review">★★★★★<p>Servicio rápido y confiable.</p><span>María G.</span></div>
@@ -82,45 +79,38 @@
   </div>
 </section>
 
-<!-- FORMULARIO A WHATSAPP -->
+<!-- CONTACTO -->
 <section class="section contact" id="contacto">
   <h2>Agenda tu Servicio Técnico</h2>
   <p>
-    Atención rápida a domicilio en <strong>Bogotá</strong>.<br>
-    Escríbenos y recibe respuesta inmediata por WhatsApp.
+    Atención inmediata en <strong>Bogotá</strong>.<br>
+    Completa el formulario y te respondemos por WhatsApp.
   </p>
 
-  <form onsubmit="enviarWhatsApp(event)">
+  <form class="contact-form" onsubmit="enviarWhatsApp(event)">
     <input type="text" id="nombre" placeholder="Tu nombre completo" required>
-    <input type="text" id="servicio" placeholder="Ej: Reparación de lavadora" required>
-    <textarea id="mensaje" placeholder="Cuéntanos qué problema presenta el equipo"></textarea>
+    <input type="text" id="servicio" placeholder="Servicio que necesitas" required>
+    <textarea id="mensaje" placeholder="Describe el problema del equipo"></textarea>
+
     <button type="submit" class="btn-primary">
       Enviar solicitud por WhatsApp
     </button>
   </form>
-
-  <p style="margin-top:15px; font-size:0.9rem; color:#94a3b8;">
-    ⏱️ Respuesta rápida • 💼 Técnicos certificados • ✅ Servicio garantizado
-  </p>
-  <button type="submit" class="btn-primary">
-    Enviar solicitud por WhatsApp
-  </button>
 </section>
 
 <!-- MAPA -->
 <section class="section">
   <h2>Zona de Atención</h2>
-  <p style="text-align:center; margin-bottom:20px; color:#cbd5f5;">
-    Servicio técnico a domicilio en Bogotá y municipios cercanos.
+  <p style="text-align:center; color:#cbd5f5; margin-bottom:25px;">
+    Servicio técnico a domicilio en Bogotá y alrededores.
   </p>
 
-  <iframe 
+  <iframe
     src="https://www.google.com/maps?q=Bogotá%20Colombia&output=embed"
-    width="100%" 
+    width="100%"
     height="320"
-    style="border:0; border-radius:25px;"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
+    style="border:0; border-radius:30px;"
+    loading="lazy">
   </iframe>
 </section>
 
@@ -131,19 +121,24 @@
   <p>© 2026 TecniHogar Express | Servicio Técnico en Bogotá</p>
 </footer>
 
-<script src="js/script.js"></script>
-
-<!-- FORM WHATSAPP -->
 <script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+  slides.forEach(s => s.style.opacity = 0);
+  slides[index].style.opacity = 1;
+  index = (index + 1) % slides.length;
+}, 3500);
+
 function enviarWhatsApp(e) {
   e.preventDefault();
-  const nombre = document.getElementById('nombre').value;
-  const servicio = document.getElementById('servicio').value;
-  const mensaje = document.getElementById('mensaje').value;
+  const nombre = nombre.value;
+  const servicio = servicio.value;
+  const mensaje = mensaje.value;
 
   const texto = `Hola, soy ${nombre}. Necesito el servicio de ${servicio}. ${mensaje}`;
-  const url = `https://wa.me/573107614795?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank');
+  window.open(`https://wa.me/573107614795?text=${encodeURIComponent(texto)}`, '_blank');
 }
 </script>
 
