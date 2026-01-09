@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: #f4f6f8;
   color: #333;
 }
@@ -13,10 +13,11 @@ body {
 /* NAV */
 nav {
   background: #083c8c;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav a {
@@ -30,13 +31,17 @@ nav a {
 header {
   background: linear-gradient(135deg, #0b5ed7, #0a58ca);
   color: white;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2.3rem;
 }
 
 /* SECTIONS */
 section {
-  padding: 40px 20px;
+  padding: 45px 20px;
   max-width: 1100px;
   margin: auto;
 }
@@ -44,36 +49,51 @@ section {
 h2 {
   text-align: center;
   color: #0b5ed7;
+  margin-bottom: 25px;
 }
 
 /* SERVICES */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 14px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
 }
 
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.gallery img {
+/* GALERÍA COMPACTA */
+.gallery-container {
   width: 100%;
-  border-radius: 12px;
+  max-width: 420px;
+  height: 260px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  position: relative;
 }
 
-/* REVIEWS */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* clave para tamaños distintos */
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* RESEÑAS */
 .reviews {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -82,8 +102,9 @@ h2 {
 
 .review {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-style: italic;
 }
 
@@ -91,23 +112,27 @@ h2 {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+  color: #0b5ed7;
 }
 
-/* CONTACT */
+/* CONTACTO */
 .contact {
   background: #e9f1ff;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: center;
+  padding: 35px;
 }
 
 .btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 12px 25px;
+  padding: 14px 30px;
   background: #25D366;
   color: white;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1.05rem;
 }
 
 /* WHATSAPP */
@@ -120,12 +145,14 @@ h2 {
   padding: 15px;
   border-radius: 50%;
   text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
 footer {
-  background: #222;
+  background: #1c1c1c;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 18px;
 }
